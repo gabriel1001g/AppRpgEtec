@@ -60,12 +60,30 @@
 	</ItemGroup>
 
 	<ItemGroup>
+	  <AndroidResource Remove="Services\NewFolder1\**" />
+	  <AndroidResource Remove="Services\NewFolder\**" />
+	  <Compile Remove="Services\NewFolder1\**" />
+	  <Compile Remove="Services\NewFolder\**" />
+	  <EmbeddedResource Remove="Services\NewFolder1\**" />
+	  <EmbeddedResource Remove="Services\NewFolder\**" />
+	  <MauiCss Remove="Services\NewFolder1\**" />
+	  <MauiCss Remove="Services\NewFolder\**" />
+	  <MauiXaml Remove="Services\NewFolder1\**" />
+	  <MauiXaml Remove="Services\NewFolder\**" />
+	  <None Remove="Services\NewFolder1\**" />
+	  <None Remove="Services\NewFolder\**" />
+	</ItemGroup>
+
+	<ItemGroup>
 		<PackageReference Include="Microsoft.Maui.Controls" Version="$(MauiVersion)" />
 		<PackageReference Include="Microsoft.Extensions.Logging.Debug" Version="9.0.0" />
 		<PackageReference Include="Newtonsoft.Json" Version="13.0.3" />
 	</ItemGroup>
 
 	<ItemGroup>
+	  <MauiXaml Update="Views\Armas\CadastroArmaView.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
 	  <MauiXaml Update="Views\Personagens\CadastroPersonagemView.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
@@ -78,6 +96,10 @@
 	  <MauiXaml Update="Views\Usuarios\LoginView.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
+	</ItemGroup>
+
+	<ItemGroup>
+	  <Folder Include="ViewModels\Armas\" />
 	</ItemGroup>
 
 </Project>
