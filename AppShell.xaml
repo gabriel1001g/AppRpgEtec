@@ -15,9 +15,10 @@
 
 
     <ShellContent
-        Title="Armas"
-        ContentTemplate="{DataTemplate viewsArmas:CadastroArmaView}"
-        ></ShellContent>
+    Title="Armas"
+    ContentTemplate="{DataTemplate viewsArmas:ListagemView}"
+    Route="lstagemArmas"/>
+
 
 
 </Shell>
